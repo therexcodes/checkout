@@ -29,16 +29,17 @@
       <h2 id="details-heading">Your details</h2>
       <form id="checkout">
         <label for="name">Full name</label>
-        <input id="name" name="name" autocomplete="name" required maxlength="100">
+        <input id="name" autocomplete="name" required maxlength="100">
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" autocomplete="email" required maxlength="254">
+        <input id="email" type="email" autocomplete="email" required maxlength="254">
         <label for="address">Delivery address</label>
-        <input id="address" name="address" autocomplete="street-address" required maxlength="300">
+        <input id="address" autocomplete="street-address" required maxlength="300">
         <label for="quantity">Notebook quantity</label>
-        <select id="quantity" name="quantity">
+        <select id="quantity">
           <option value="1">1</option><option value="2">2</option><option value="3">3</option>
         </select>
-        <button type="submit">Place demo order</button>
+        <button id="place-order" type="submit" disabled>Place demo order</button>
+        <noscript><p>Enable JavaScript to try this demo checkout.</p></noscript>
         <p id="message" role="status"></p>
       </form>
     </section>
@@ -67,13 +68,14 @@
   quantity.addEventListener('change', updateSummary);
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (!form.elements.name.value.trim() || !form.elements.address.value.trim()) {
+    if (!document.getElementById('name').value.trim() || !document.getElementById('address').value.trim()) {
       message.textContent = 'Please enter a name and delivery address containing more than spaces.';
       return;
     }
     message.textContent = 'Demo order confirmed. No payment was taken and no order was sent.';
   });
   updateSummary();
+  document.getElementById('place-order').disabled = false;
 </script>
 </body>
 </html>
