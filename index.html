@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starter Project</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 48rem; margin: 4rem auto; padding: 0 1rem; line-height: 1.6; }
+    button { font: inherit; padding: .5rem 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Starter Project</h1>
+  <p>Your HTML project is ready to customize.</p>
+  <button id="greet" type="button">Say hello</button>
+  <p id="message" role="status"></p>
+  <script>
+    document.getElementById('greet').addEventListener('click', () => {
+      document.getElementById('message').textContent = 'Hello! Your page is working.';
+    });
+  </script>
+</body>
+</html>
