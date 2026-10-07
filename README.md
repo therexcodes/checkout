@@ -1,5 +1,5 @@
-# Starter Project
+# REXCODES Demo Checkout
 
-Open index.html in a browser to view the page. No build tools are required.
+Open index.html in a browser. Choose a notebook quantity to update the USD total, then submit sample contact details to see a demo confirmation.
 
-This starter was created for Git and Greptile onboarding.
+This static demo does not process payments, transmit form data, or create real orders. Shipping is a sample fixed $5 and taxes are excluded.
